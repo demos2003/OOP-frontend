@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css"
 import Popup from './Popup';
@@ -10,20 +10,20 @@ import 'bootstrap/dist/css/bootstrap.css';
 export const Header = () => {
   const [buttonPopup, setButtonPopup ] = useState(false);
   return (
-   
-    <div className="navbar">
-      <div className="logo">
-        <img
-          src="https://res.cloudinary.com/manlikeemma/image/upload/v1652779315/Farm/HHF_Logo_um8xyr.png"
-          className="logo-size"
-          alt=""
-        />
-      </div>
-      <div className="navbar-btn navbar-btn1">
-        <Link to="/" className="nav_btn">
-          <a>Home</a>
-        </Link>
-       
+    <>
+      <div className="navbar">
+        {/* <div className="logo">
+          <img
+            src="https://res.cloudinary.com/manlikeemma/image/upload/v1652779315/Farm/HHF_Logo_um8xyr.png"
+            className="logo-size"
+            alt=""
+          />
+        </div> */}
+
+        <div className="navbar-btn navbar-btn1">
+          <Link to="/" className="nav_btn">
+            <a>Home</a>
+          </Link>
           <a onClick={() => setButtonPopup(true)} className=' nav_btn'>Login</a>
           <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
       <form>
@@ -44,14 +44,12 @@ export const Header = () => {
         <button type="submit" class="btn btn-primary save-btn">Save</button>
       </form>
     </Popup>
-        
-        <Link to="/product" className="nav_btn signup_btn">
-          <a>Sign up</a>
-        </Link>
-        
-     
-             </div>
-    </div>
-  
-  )
-}
+         
+          <Link to="/product" className="nav_btn signup_btn">
+            <a>Sign up</a>
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+};
