@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from '../Components/Header'
-import Centers from '../Components/Centers'
+import Centers from '../Components/EventCenters'
 import { Footer } from '../Components/Footer'
 import {Main} from '../Components/Main'
 
