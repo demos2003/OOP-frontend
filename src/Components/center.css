@@ -1,0 +1,25 @@
+.photo_holder{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+
+    flex-wrap: wrap;
+}
+
+.photo_size{
+    width: 400px;
+    
+}
+
+.center_desc-title{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.center_desc-holder{
+    text-align: center;
+    margin-bottom: 50px;
+    border: 5px solid white;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
