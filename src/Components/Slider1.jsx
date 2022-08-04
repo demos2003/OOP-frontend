@@ -21,37 +21,37 @@ export default class AutoPlay extends Component {
           <div>
           <div className='center_desc-holder'>
         <img src='/images/test.jpg' alt="" className='photo_size'/>
-        <h1>Babcock Stadium</h1>
+        <h3 className="mt-3">Babcock Stadium</h3>
         </div>
           </div>
           <div>
           <div className='center_desc-holder'>
         <img src='/images/test.jpg' alt="" className='photo_size'/>
-        <h1>Babcock Stadium</h1>
+        <h3 className="mt-3">Babcock Stadium</h3>
         </div>
           </div>
           <div>
           <div className='center_desc-holder'>
         <img src='/images/test.jpg' alt="" className='photo_size'/>
-        <h1>Babcock Stadium</h1>
+        <h3 className="mt-3">Babcock Stadium</h3>
         </div>
           </div>
           <div>
           <div className='center_desc-holder'>
         <img src='/images/test.jpg' alt="" className='photo_size'/>
-        <h1>Babcock Stadium</h1>
+        <h3 className="mt-3">Babcock Stadium</h3>
         </div>
           </div>
           <div>
           <div className='center_desc-holder'>
         <img src='/images/test.jpg' alt="" className='photo_size'/>
-        <h1>Babcock Stadium</h1>
+        <h3 className="mt-3">Babcock Stadium</h3>
         </div>
           </div>
           <div>
           <div className='center_desc-holder'>
         <img src='/images/test.jpg' alt="" className='photo_size'/>
-        <h1>Babcock Stadium</h1>
+        <h3 className="mt-3">Babcock Stadium</h3>
         </div>
           </div>
         </Slider>

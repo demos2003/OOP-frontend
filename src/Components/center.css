@@ -8,6 +8,7 @@
 
 .photo_size{
     width: 350px;
+    border-radius: 4px;
     
 }
 .sliders{
@@ -23,8 +24,9 @@
 .center_desc-holder{
     text-align: center;
     margin-bottom: 50px;
-    /* border: 5px solid white; */
-    border-radius: 5px;
+    border: 3px solid white;
+    /* border-radius: 5px; */
+    margin: 9px;
     /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
     /* transition: all 1s; */
 }

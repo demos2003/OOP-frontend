@@ -6,8 +6,8 @@
   color: white;
   display: flex;
   flex-direction: row;
-  position: relative;
-  top: -7px;
+  /* position: relative;
+  top: -3px; */
   
 }
 .title {

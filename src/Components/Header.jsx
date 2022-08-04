@@ -45,8 +45,8 @@ export const Header = () => {
       </form>
     </Popup>
          
-          <Link to="/product" className="nav_btn signup_btn">
-            <a>Sign up</a>
+          <Link to="/signup" className="nav_btn signup_btn">
+            <a href="">Sign up</a>
           </Link>
         </div>
       </div>
