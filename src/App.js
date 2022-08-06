@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Landing from './Views/Landing';
 import Signup from './Views/Signup';
+import AdminLogin from './Views/AdminLogin';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
    <Routes>
           <Route path="/" element={<Land/>} />
           <Route path="/signup" element={<Sign/>}/>
+          <Route path="/adminlogin" element={<Admin/>}/>
 
             
           {/* <Route path="/" element ={<Dash/>} /> */}
@@ -32,6 +34,10 @@ function Land(){
 
 function Sign(){
   return<Signup/>
+}
+
+function Admin(){
+  return<AdminLogin/>
 }
 
 export default App;
