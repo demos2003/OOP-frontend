@@ -1,0 +1,64 @@
+.client-home-container {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.welcome-text {
+  font-size: 1.8rem;
+}
+
+.event-header {
+  margin: 15px 0;
+  color: #ff3259;
+  font-size: 2.2rem;
+}
+
+.event-header.pending {
+  color: gray;
+}
+
+.event-container {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 40px;
+}
+
+.event-date {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: #ff3259;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
+  margin: 0 10px 0 0;
+}
+
+.event-date.pending {
+  background-color: grey;
+}
+
+.event-details {
+  margin: 5px 0 5px 20px;
+}
+
+.event-day,
+.event-month {
+  font-size: 2rem;
+}
+
+.event-month {
+  font-weight: 800;
+}
+
+.event-name {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.event-location,
+.event-time,
+.event-status {
+  font-size: 1.3rem;
+}

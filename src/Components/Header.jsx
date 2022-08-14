@@ -25,7 +25,7 @@ export const Header = () => {
           <a onClick={() => setButtonPopup(true)} className=" nav_btn">
             Login
           </a>
-          <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <Popup className="fmf" trigger={buttonPopup} setTrigger={setButtonPopup}>
             <form className="login_form">
               <h1 className="login_title">Login</h1>
               <div style={{ float: "left", width: "36%" }} className="line">
