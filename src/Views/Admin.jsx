@@ -11,7 +11,8 @@ const Admin = () => {
       <AdminNav/>
       <div className='admin_panelHolder'>
         <div className='sidebar'>
-            
+            <p>Requests</p>
+            <p>Event Centers</p>
         </div>
         <div className='admin_request'>
             <Requests/>
