@@ -12,7 +12,7 @@ export const ClientNav = () => {
         Book Event
       </Link>
       <Link to="/" className="logo-img">
-        <img className="logo-img" src="icons/logo.svg" alt="" />
+        <img className="logo-img" src="icons/logo.svg" alt="logo" />
       </Link>
     </div>
   );

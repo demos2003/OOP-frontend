@@ -1,0 +1,82 @@
+.content-container {
+  margin-top: 50px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.book-header {
+  color: #ff3259;
+  margin: 10px;
+}
+
+.form-container {
+  display: grid;
+  place-items: center;
+  width: 900px;
+  margin: 20px 20px 0;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.event-label {
+  display: block;
+  margin: 3px;
+}
+
+.event-form-row {
+  display: flex;
+}
+
+.row-block {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 20px;
+}
+
+.row-block.date {
+  flex-direction: row;
+}
+
+.form-input {
+  width: 300px;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #c2c2c2;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.event-time-input {
+  width: 130px;
+  height: 35px;
+  margin: 0 10px;
+  padding: 5px;
+  border: 1px solid #c2c2c2;
+  border-radius: 6px;
+}
+
+.event-textarea {
+  width: 650px;
+  padding: 5px;
+  border: 1px solid #c2c2c2;
+  border-radius: 6px;
+}
+
+.event-submit {
+  margin: 10px;
+  height: 35px;
+  width: 150px;
+  color: #fff;
+  border: 1px solid #ff3259;
+  border-radius: 6px;
+  background-color: #ff3259;
+}
+
+.form-input:focus,
+.event-time-input:focus,
+.event-textarea:focus {
+  outline: 2px solid #639ce7;
+}
