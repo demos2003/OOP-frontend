@@ -1,0 +1,32 @@
+
+  .color{
+    background-color: rgb(246, 246, 246) !important;
+    height: 100vh;
+  }
+
+  .admin_panelHolder{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+
+
+
+.sidebar{
+   width: 20.5%;
+   /* background-color: rebeccapurple; */
+   position: fixed;
+   background-color: white !important;
+   height: 100vh;
+   margin-top: 8px;
+   margin-left: 10px;
+   border-radius: 20px;
+}
+
+.admin_request{
+    width: 78%;
+
+}
+ 

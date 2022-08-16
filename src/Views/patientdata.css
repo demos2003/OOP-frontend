@@ -1,0 +1,21 @@
+.table-width{
+    width: 90%;
+}
+
+tr{
+    height: 100px;
+}
+
+td{
+    width: 200px;
+}
+
+th{
+    width: 200px;
+}
+
+
+.backgroundimg{
+    background-image: url("/public/images/backgroung.png");
+    height: 100vh;
+}

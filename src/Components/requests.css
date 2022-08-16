@@ -1,0 +1,51 @@
+.request_holder{
+    background-color: white;
+    width: 95%;
+    margin-left: 150px;
+    /* margin-right: 5%; */
+    margin-top: 4px;
+    /* padding: 20px; */
+    border-radius: 20px;
+}
+
+.holder_nav{
+    border-radius: 10px 10px 0px 0px;
+    height: 100px;
+    /* background-color: rgb(199, 169, 169); */
+    /* border-bottom: 1px solid ; */
+}
+
+
+.holder_content{
+    padding: 20px;
+}
+
+.holder_nav div {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 100px; */
+}
+
+.holder_nav div p{
+    margin-top: 70px;
+    width: 100%;
+    padding: 11px;
+}
+
+.holder_nav div p:hover{
+    background-color: whitesmoke;
+}
+
+.nav_icon{
+    font-weight: 100;
+    position: relative;
+    top: -2px;
+    margin-right: 5px;
+}
+
+.request_info{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    height: 70px;
+}
