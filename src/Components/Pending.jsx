@@ -2,7 +2,7 @@ import React from 'react'
 import './adminNav.css'
 const Pending = () => {
   return (
-    <div>
+    <div className='requestContent_holder'>
       <div className='request_info'>
                     <p>Nasiru Iyidemilade Halim</p> 
                       <p>Amphitheatre 17/06/2022 8:00am - 10:00am
