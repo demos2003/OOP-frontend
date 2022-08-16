@@ -1,0 +1,110 @@
+.client-home-container {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.top-section {
+  display: flex;
+  /* gap: 300px; */
+}
+
+.welcome-section {
+  display: flex;
+  padding: 20px;
+  background-color: #ff3259;
+  border-radius: 30px 30px 0 30px;
+  /* margin: 30px 300px 40px 0; */
+}
+
+.date {
+  text-align: center;
+  margin: 40px;
+  min-width: 200px;
+}
+
+.today{
+    font-size: 1.55rem;
+}
+
+.day{
+    font-weight: 700;
+}
+
+.year{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.welcome-header {
+  color: aliceblue;
+  font-size: 1.8rem;
+}
+
+.welcome-text {
+  color: aliceblue;
+  font-size: 1.14rem;
+  margin-right: 100px;
+  line-height: 1.7;
+}
+
+.welcome-image {
+  height: 250px;
+  width: 600px;
+  object-fit: cover;
+}
+
+.event-header {
+  margin: 15px 0;
+  color: #ff3259;
+  font-size: 2.2rem;
+}
+
+.event-header.pending {
+  color: gray;
+}
+
+.event-container {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 40px;
+}
+
+.event-date {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: #ff3259;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
+  margin: 0 10px 0 0;
+}
+
+.event-date.pending {
+  background-color: grey;
+}
+
+.event-details {
+  margin: 5px 0 5px 20px;
+}
+
+.event-day,
+.event-month {
+  font-size: 2rem;
+}
+
+.event-month {
+  font-weight: 800;
+}
+
+.event-name {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.event-location,
+.event-time,
+.event-status {
+  font-size: 1.3rem;
+}

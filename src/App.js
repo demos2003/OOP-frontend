@@ -5,6 +5,7 @@ import Signup from './Views/Signup';
 import AdminLogin from './Views/AdminLogin';
 import PatientData from './Views/PatientData';
 import Admin from './Views/Admin';
+import ClientHome from "./Views/ClientHome";
 
 function App() {
   return (
@@ -16,12 +17,13 @@ function App() {
           <Route path="/adminlogin" element={<AdminLogin/>}/>
           <Route path="/patientdata" element={<PatientData/>}/>
           <Route path="/admin" element={<Admin/>}/>
+          <Route path="/dashboard" element={<ClientHome />} />
    </Routes>
         </BrowserRouter>
-   
-    </div>
-  );
+        </div>
+    )
 }
+
 
 
 export default App;

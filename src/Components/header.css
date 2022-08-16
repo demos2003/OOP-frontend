@@ -50,6 +50,11 @@
   margin-right: 10%;
   font-family: Gilroy, sans-serif;
 }
+
+.nav_btn {
+  cursor: pointer;
+}
+
 .navbar-btn a {
   margin-bottom: 20px;
   margin-left: 5px;
@@ -90,22 +95,22 @@
   background-color: #ff3259 !important;
   border: 1px solid #ff3259 !important;
 }
-.space{
+.space {
   margin-bottom: 10px;
 }
-.signup_link{
+.signup_link {
   color: black;
   margin-top: 20px;
 }
-.login_title{
+.login_title {
   margin-left: 40%;
   width: 60%;
   font-weight: bold;
 }
-.line{
+.line {
   margin-right: 13px;
 }
-.inline_text{
+.inline_text {
   font-size: 15px;
   color: grey;
 }
