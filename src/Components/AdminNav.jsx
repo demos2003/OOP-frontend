@@ -6,12 +6,15 @@ import {AiOutlineQuestionCircle} from 'react-icons/ai'
 const AdminNav = () => {
   return (
     <div>
-        <div className='topNav box'>
+        <div className='topNav'>
             <div className='admin_title'>ADMIN PANEL </div>
-            <div className='search'> <input className='search1' type="text"/></div>
+            <div className='search'> <input className='search1' type="text" placeholder='Search request'/></div>
             <div className='logout'>
+            <div className='total_space'></div>
                 <h5><FiSettings/></h5>
+                <div className='space'></div>
                 <h5><AiOutlineQuestionCircle/></h5>
+                <div className='space'></div>
                 <h5>Admin</h5>
             </div>
 
