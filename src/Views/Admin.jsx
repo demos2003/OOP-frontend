@@ -3,19 +3,32 @@ import AdminNav from '../Components/AdminNav'
 import './admin.css'
 import Requests from '../Components/Requests'
 import { useState } from 'react'
+import AdminEventCenters from '../Components/AdminEventCenters'
 
 const Admin = () => {
-  const [active1, setActive2] = useState("Request")
+  const [active1, setActive1] = useState("Request")
   return (
     <div className='color'>
       <AdminNav/>
       <div className='admin_panelHolder'>
         <div className='sidebar'>
-            <p>Requests</p>
-            <p>Event Centers</p>
+
+           
+
+            <p>
+              <a onClick={() => setActive1("Request")}>
+              Requests
+              </a></p>
+              <p>
+                <a onClick={() => setActive1("Events")}>
+                Events Centers
+                </a>
+                </p>
+
         </div>
         <div className='admin_request'>
-            <Requests/>
+          {active1 === "Request" && <Requests/>}
+           {active1 === "Events" && <AdminEventCenters/>} 
         </div>
       </div>
       
