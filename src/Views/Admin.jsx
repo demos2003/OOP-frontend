@@ -11,6 +11,7 @@ import {RiDraftLine} from "react-icons/ri"
 const Admin = () => {
   const [active1, setActive1] = useState("Request");
   return (
+
     <div className="color">
       <AdminNav />
       <div className="admin_panelHolder">
@@ -39,13 +40,10 @@ const Admin = () => {
               <b className="space">Draft</b>
             </a>
           </p>
-        </div>
-        <div className="admin_request">
-          {active1 === "Request" && <Requests />}
-          {active1 === "Events" && <AdminEventCenters />}
-        </div>
-      </div>
-    </div>
+          </div>
+          </div>
+
+</div>   
   );
 };
 

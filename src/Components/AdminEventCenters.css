@@ -5,4 +5,13 @@
     margin-left: 170px;
     margin-top: 10px;
     border-radius: 20px;
+    padding: 20px;
+}
+
+.add{
+    margin-bottom: 10px !important;
+}
+
+.EventHeader{
+    text-align: center;
 }
