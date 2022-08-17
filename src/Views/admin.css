@@ -18,12 +18,42 @@
   margin-left: 10px;
   border-radius: 20px;
 }
+/* .sidebar p a{
+  margin-left: 20px;
+  font-size: 20px;
+  /* padding: 10px; 
+  width: 250px;
+} */
+
 
 .admin_request {
   width: 78%;
 }
-/* .admin_title{
-  margin-left: 10px;
- font-weight: bold;
-
-} */
+.request-btn{
+  margin-top: 100px; 
+}
+.sidebar p{
+  margin-left: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 18px;
+  width: 240px;
+}
+.sidebar p:hover{
+  border-radius: 8px;
+  background-color: rgb(212, 212, 212);
+  width: 240px;
+  margin-left: 20px;
+  font-size: 18px;
+  padding: 5px;
+  padding-left: 10px;
+}
+.space{
+  margin-left: 5px;
+}
+.event_centers-btn{
+  margin-top: 20px;
+}
+b{
+  font-size: 18px;
+}
