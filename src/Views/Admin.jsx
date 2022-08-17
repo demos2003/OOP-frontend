@@ -11,11 +11,8 @@ const Admin = () => {
     <div className='color'>
       <AdminNav/>
       <div className='admin_panelHolder'>
-        <div className='sidebar'>
-
-           
-
-            <p>
+        <div className='sidebar'>       
+           <p>
               <a onClick={() => setActive1("Request")}>
               Requests
               </a></p>
