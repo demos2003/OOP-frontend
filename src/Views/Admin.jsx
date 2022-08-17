@@ -41,9 +41,13 @@ const Admin = () => {
             </a>
           </p>
           </div>
-          </div>
-
-</div>   
+ 
+        <div className="admin_request">
+          {active1 === "Request" && <Requests />}
+          {active1 === "Events" && <AdminEventCenters />}
+        </div>
+      </div>
+    </div>
   );
 };
 

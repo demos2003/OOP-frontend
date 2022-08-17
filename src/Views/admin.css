@@ -1,5 +1,6 @@
 .color {
   background-color: #eae3d2;
+  height: 100vh;
 }
 
 .admin_panelHolder {
@@ -13,7 +14,7 @@
   /* background-color: rebeccapurple; */
   position: fixed;
   background-color: white !important;
-  height: 100vh;
+  height: 85.5vh;
   margin-top: 8px;
   margin-left: 10px;
   border-radius: 20px;
