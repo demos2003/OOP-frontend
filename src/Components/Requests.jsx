@@ -8,9 +8,8 @@ import Pending from './Pending'
 import Approved from './Approved'
 import Declined from './Declined'
 import DoubleBooking from './DoubleBooking'
-// import DataTable from './Table'
 
-const Requests = () => {
+const Requests = ({active1, setActive1}) => {
    const [active, setActive] = useState("Pending1")
   return (
     <div>
@@ -44,13 +43,10 @@ const Requests = () => {
        </div>
        <hr></hr>
        <div className='holder_content'>
-       {active === "Pending1" && <Pending />}
+       {active === "Pending1" && <Pending active1={active1} setActive1={setActive1} />}
       {active === "Approved1" && <Approved/>}
       {active === "Denied1" && <Declined/>}
       {active === "Double1" && <DoubleBooking/>}
-
-                 
-                {/* <DataTable/> */}
        </div>
       </div>
     </div>

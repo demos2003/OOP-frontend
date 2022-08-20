@@ -2,11 +2,12 @@ import React from 'react'
 import './AdminEventCenters.css'
 import { useState } from 'react'
 import Popup1 from './Popup1'
+import {IoMdAdd} from 'react-icons/io'
 const Add = () => {
   const [ addNew, setAddNew] = useState(false)
   return (
     <div>
-        <button onClick={() => setAddNew(true)} style={{float:"right"}} className="add">Add</button>
+        <button onClick={() => setAddNew(true)} style={{float:"right"}} className="add"><b><IoMdAdd/></b></button>
         <Popup1 trigger={addNew} setTrigger={setAddNew}>
                     <h3>Add Event Center</h3>
                     <form>

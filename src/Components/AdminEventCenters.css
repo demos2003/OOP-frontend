@@ -1,7 +1,7 @@
 .request_holder1{
     width: 95%;
     background-color: white ;
-    height: 88vh;
+    height: 85vh;
     margin-left: 170px;
     margin-top: 10px;
     border-radius: 20px;
@@ -10,7 +10,17 @@
 
 .add{
     margin-bottom: 10px !important;
+    font-size: 15px;
+    /* border: none; */
+    background-color: #446A46;
+    color: white;
+    border: none;
+    padding-top: 0;
+    width: 50px;
+    border-radius: 5px;
+    
 }
+
 
 .EventHeader{
     text-align: center;

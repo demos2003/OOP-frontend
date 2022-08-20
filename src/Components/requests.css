@@ -4,6 +4,12 @@
     margin-left: 170px;
     margin-top: 10px;
     border-radius: 20px;
+    color: black;
+    height: 85vh !important;
+}
+
+.request_holder2{
+    height: 85vh !important;
 }
 
 .holder_nav{
@@ -61,4 +67,91 @@
 .requestContent_holder{
     height: 60vh;
     overflow: auto;
+}
+
+.back_btn{
+    background-color: transparent;
+    border: none;
+  
+}
+
+.arrow{
+    font-size: 30px;
+    color: grey;
+}
+.detail_holder{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+}
+
+
+.top_div{
+    height: 200px;
+    width: 700px;
+}
+
+.middle_div{
+    height: 200px;
+    width: 700px;
+}
+.bottom_div{
+    height: 200px;
+    width: 700px;
+}
+.event_details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 700px;
+}
+.detail_holder h4{
+    /* width: 600px; */
+    margin-bottom: 10px;
+    /* margin-top: 20px; */
+}
+.event_details_title{
+    /* margin-top: 10px; */
+}
+.contact_info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 700px;
+}
+.event{
+    width: 350px;
+}
+.space_3{
+    margin-top: 20px;
+}
+.action_button{
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    position: relative;
+    left: 180px;  
+}
+.accept_btn{
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.decline_btn{
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 10px ;
 }
