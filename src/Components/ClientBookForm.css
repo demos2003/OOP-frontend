@@ -80,3 +80,7 @@
 .event-textarea:focus {
   outline: 2px solid #639ce7;
 }
+
+.duration_width{
+  width: 130px;
+}

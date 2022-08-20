@@ -3,14 +3,24 @@ import './requests.css'
 import {RiCheckDoubleLine} from 'react-icons/ri'
 import {MdOutlineCancel, MdPendingActions} from 'react-icons/md'
 import {AiOutlineCheckCircle} from 'react-icons/ai'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Pending from './Pending'
 import Approved from './Approved'
 import Declined from './Declined'
 import DoubleBooking from './DoubleBooking'
+import axios from 'axios'
+import config from '../config'
 
 const Requests = ({active1, setActive1}) => {
    const [active, setActive] = useState("Pending1")
+   const [bookData, setBookData] = useState([]);
+   useEffect(() => {
+    const fetchbookData = async () => {
+      const res = await axios.get(`${config.baseURL}/api/bookings`);
+      setBookData(res.data)
+    };
+    fetchbookData();
+   }, []);
   return (
     <div>
       <div className='request_holder'>
@@ -43,7 +53,8 @@ const Requests = ({active1, setActive1}) => {
        </div>
        <hr></hr>
        <div className='holder_content'>
-       {active === "Pending1" && <Pending active1={active1} setActive1={setActive1} />}
+        
+       {active === "Pending1" && <Pending active1={active1} setActive1={setActive1} bookData={bookData} />}
       {active === "Approved1" && <Approved/>}
       {active === "Denied1" && <Declined/>}
       {active === "Double1" && <DoubleBooking/>}

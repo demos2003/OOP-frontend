@@ -38,73 +38,10 @@ const ClientBookForm = () => {
         </h5>
 
         <form onSubmit={handleSubmit} className="form-container">
-          <h2 className="book-header">Contact Information</h2>
-          <div className="event-form-row">
-            <div className="row-block">
-              <label className="event-label" htmlFor="firstName">
-                First Name
-              </label>
-              <input
-                type="text"
-                id="first-name"
-                name="firstName"
-                placeholder="John"
-                value={values.firstName}
-                onChange={handleInputChange}
-                className="form-input"
-                required
-              />
-            </div>
+          
+        
 
-            <div className="row-block">
-              <label className="event-label" htmlFor="lastName">
-                Last Name
-              </label>
-              <input
-                type="text"
-                id="first-name"
-                name="lastName"
-                placeholder="Doe"
-                value={values.lastName}
-                onChange={handleInputChange}
-                className="form-input"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="event-form-row">
-            <div className="row-block">
-              <label className="event-label" htmlFor="email">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="example@abc.com"
-                onChange={handleInputChange}
-                className="form-input"
-                required
-              />
-            </div>
-            <div className="row-block">
-              <label className="event-label" htmlFor="phoneNum">
-                Phone Number
-              </label>
-              <input
-                type="number"
-                name="phoneNum"
-                id="phone-num"
-                value={values.phoneNum}
-                placeholder="08000000000"
-                onChange={handleInputChange}
-                className="form-input"
-                required
-              />
-            </div>
-          </div>
-
+         
           <h2 className="book-header">Event Details</h2>
 
           <div className="event-form-row">
@@ -158,7 +95,7 @@ const ClientBookForm = () => {
             <div className="row-block date">
               <div>
                 <label className="event-label" htmlFor="eventStartTime">
-                  Start Time
+                 Time
                 </label>
                 <input
                   id="event-start-time"
@@ -169,14 +106,19 @@ const ClientBookForm = () => {
               </div>
               <div>
                 <label className="event-label" htmlFor="eventEndTime">
-                  End Time
+                  Duration(hrs)
                 </label>
-                <input
-                  id="event-end-time"
-                  type="time"
-                  name="eventEndTime"
-                  className="event-time-input"
-                />
+                <select name="eventLocation" className="form-input event-time-input" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">
+                  4
+                </option>
+                <option value="5">5+</option>
+                <option value="10">10+</option>
+                <option value="24">24</option>
+              </select>
               </div>
             </div>
           </div>
