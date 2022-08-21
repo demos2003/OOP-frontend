@@ -31,7 +31,7 @@ export const ClientHomepage = () => {
             </p>
           </div>
           <img
-            src={process.env.PUBLIC_URL + "images/welcome.png"}
+            src={process.env.PUBLIC_URL + "images/welcome.svg"}
             alt="welcome"
             className="welcome-image"
           />
