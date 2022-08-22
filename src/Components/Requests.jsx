@@ -11,7 +11,7 @@ import DoubleBooking from "./DoubleBooking";
 import axios from "axios";
 import config from "../config";
 
-const Requests = ({ active1, setActive1 }) => {
+const Requests = ({ active1, setActive1, active2, setActive2 }) => {
   const [active, setActive] = useState("Pending1");
   const [bookData, setBookData] = useState([]);
   useEffect(() => {
@@ -20,63 +20,63 @@ const Requests = ({ active1, setActive1 }) => {
       setBookData(res.data)
     };
     fetchbookData();
-   }, []);
-   const [approveData, setApprovedData] = useState([]);
-   useEffect(() => {
-     const fetchapproveData = async () => {
+  }, []);
+  const [approveData, setApprovedData] = useState([]);
+  useEffect(() => {
+    const fetchapproveData = async () => {
       const res = await axios.get(`${config.baseURL}/api/approved`);
       setApprovedData(res.data)
-     };
-     fetchapproveData();
-   }, []);
+    };
+    fetchapproveData();
+  }, []);
 
-   const [deniedData, setDeniedData] = useState([]);
-   useEffect(() => {
+  const [deniedData, setDeniedData] = useState([]);
+  useEffect(() => {
     const fetchdeniedData = async () => {
-      const res = await axios.get(`${config.baseURL}/api/approved`);
+      const res = await axios.get(`${config.baseURL}/api/denied`);
       setDeniedData(res.data)
     };
     fetchdeniedData();
-   }, [])
+  }, [])
   return (
     <div>
       <div className='request_holder'>
-       <div className='holder_nav'>
-           <div>
+        <div className='holder_nav'>
+          <div>
             <p className='options'>
-              <MdPendingActions className='nav_icon'/>
+              <MdPendingActions className='nav_icon' />
               <a onClick={() => setActive("Pending1")}>
-              Pending
-              </a>                
-                </p> 
+                Pending
+              </a>
+            </p>
             <p className='options'>
-               <AiOutlineCheckCircle className='nav_icon'/>
-               <a onClick={() => setActive("Approved1")}>
-               Approved
-              </a> 
-                </p>  
+              <AiOutlineCheckCircle className='nav_icon' />
+              <a onClick={() => setActive("Approved1")}>
+                Approved
+              </a>
+            </p>
             <p className='options'>
-                <MdOutlineCancel className='nav_icon'/>
-                 <a onClick={() => setActive("Denied1")}>
+              <MdOutlineCancel className='nav_icon' />
+              <a onClick={() => setActive("Denied1")}>
                 Denied
-              </a> </p> 
+              </a> </p>
             <p className='options'>
-                <RiCheckDoubleLine className='nav_icon'/>
-                 <a onClick={() => setActive("Double1")}>
+              <RiCheckDoubleLine className='nav_icon' />
+              <a onClick={() => setActive("Double1")}>
                 Double Booked
               </a> </p>
-            </div>
-           
-       </div>
-       <hr></hr>
-       <div className='holder_content'>
-        
-       {active === "Pending1" && <Pending active1={active1} setActive1={setActive1} bookData={bookData} />}
-      {active === "Approved1" && <Approved approveData={approveData}/>}
-      {active === "Denied1" && <Declined deniedData={deniedData}/>}
-      {active === "Double1" && <DoubleBooking/>}
-       </div>
-      
+          </div>
+
+        </div>
+        <hr></hr>
+        <div className='holder_content'>
+
+          {active === "Pending1" && <Pending active1={active1} setActive1={setActive1} bookData={bookData} active2={active2} setActive2={setActive2} />}
+          {active === "Approved1" && <Approved approveData={approveData} />}
+          {active === "Denied1" && <Declined deniedData={deniedData} />}
+          {active === "Double1" && <DoubleBooking />}
+        </div>
+
       </div>
     </div>
   );

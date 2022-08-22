@@ -13,6 +13,7 @@ import Details from "../Components/Details";
 
 const Admin = () => {
   const [active1, setActive1] = useState("Request");
+  const [active2, setActive2]= useState()
 
   return (
     <div className="color">
@@ -45,9 +46,9 @@ const Admin = () => {
           </p>
         </div>     
        <div className="admin_request">
-          {active1 === "Request" && <Requests active1={active1} setActive1={setActive1} />}
+          {active1 === "Request" && <Requests active1={active1} setActive1={setActive1} active2={active2} setActive2={setActive2} />}
           {active1 === "Events" && <AdminEventCenters/>}
-          {active1 === "Test" && <Details active1={active1} setActive1={setActive1}/>}
+          {active1 === "Test" && <Details active1={active1} setActive1={setActive1} active2={active2} setActive2={setActive2}/>}
         </div>
       </div>
     </div>

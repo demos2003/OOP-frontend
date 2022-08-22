@@ -4,10 +4,13 @@ const Approved = ({approveData}) => {
    const Approved1 = ({approve}) => {
       return(
          <div className='request_info'>
-         <p>Nasiru Iyidemilade Halim</p> 
-           <p>Amphitheatre 17/06/2022 8:00am - 10:00am
-        </p>
-         <p>9:15pm</p> 
+         <p>{approve.username}</p>
+            <p>{approve.eventcenter}
+            </p>
+            <p>{approve.duration}</p>
+            <p>{approve.desc}</p>
+            <p>{approve.dateofbooking}</p>
+            <p>{approve.duration}</p>
       </div>
       );
    }
