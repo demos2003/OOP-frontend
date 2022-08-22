@@ -8,7 +8,7 @@ import axios from "axios";
 
 const Add = () => {
   const [addNew, setAddNew] = useState(false);
-  const [eventcentername, seteventcentername] = useState("");
+  const [eventcentername, setEventcentername] = useState("");
   const [capacity, setCapacity] = useState("");
   const [desc, setDesc] = useState("");
   const [error, setError] = useState(false);
@@ -24,7 +24,7 @@ const Add = () => {
       });
       res.data && window.location.reload();
     } catch (err) {
-      console.log(err);
+       console.log(err)
       setError(true);
     }
   };
@@ -43,33 +43,32 @@ const Add = () => {
         <h3>Add Event Center</h3>
         <form>
           <div className="form-group">
-            <label for="LocationName">Location Name</label>
+            <label>Location Name</label>
             <input
               type="email"
               className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter Location Name"
-              onChange={(e) => seteventcentername(e.target.value)}
+              onChange={(e) => setEventcentername(e.target.value)}
             />
           </div>
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Location Capacity</label>
+            <label>Location Capacity</label>
             <select
               class="form-control"
               id="exampleFormControlSelect1"
               onChange={(e) => setCapacity(e.target.value)}
             >
-              <option value="1">000 - 050</option>
-              <option value="2">050 - 150</option>
-              <option value="3">150 - 300</option>
-              <option value="4">300 - 500</option>
-              <option value="5">300 - 500</option>
-              <option value="6"> 500+</option>
+              <option value="000 - 050">000 - 050</option>
+              <option value="050 - 150">050 - 150</option>
+              <option value="150 - 300">150 - 300</option>
+              <option value="300 - 500">300 - 500</option>
+              <option value="500+"> 500+</option>
             </select>
           </div>
           <div className="form-group">
-            <label for="exampleInputEmail1">Location Description</label>
+            <label>Location Description</label>
             <textarea
               class="form-control"
               id="exampleFormControlTextarea1"

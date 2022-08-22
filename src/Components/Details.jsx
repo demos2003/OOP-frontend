@@ -1,8 +1,26 @@
 import React from 'react'
 import './requests.css'
 import {BiArrowBack} from 'react-icons/bi'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import config from '../config'
 
-const Details = ({setActive1}) => {
+const Details = ({setActive1, active2, setActive2}) => {
+  const [duration, setDuration] = useState([]);
+  const [date, setDate] =useState([]);
+  const [location, setLocation] = useState([]);
+  const [descrtiption, setDescription] =useState([]);
+  useEffect(() => {
+    const fetchbookDetails = async () => {
+      const res = await axios.get(`${config.baseURL}/api/pending/${active2}`);
+      setDuration(res.data.duration)
+      setDate(res.data.dateofbooking)
+      setLocation(res.data.eventcenter)
+      setDescription(res.data.desc)
+    };
+    fetchbookDetails();
+  }, []);
+  
   return (
     <div className='request_holder1 request_holder2'>
         <button onClick={() => setActive1("Request")} className="back_btn"><BiArrowBack className='arrow'/></button>
@@ -12,7 +30,7 @@ const Details = ({setActive1}) => {
           <div className='contact_info'>
           <div className='event'>
           <p>First Name</p>
-          <p>Jolaoluwa</p>
+          <p>{date}</p>
           <div className='space_3'></div>
           <p>Last Name</p>
           <p>Olusanya</p>

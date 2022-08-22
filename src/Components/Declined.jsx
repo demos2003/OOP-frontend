@@ -4,10 +4,13 @@ const Declined = ({deniedData}) => {
     const Denied = ({denied}) => {
         return(
             <div className='request_info'>
-                <p>Nasiru Iyidemilade Halim</p>
-                <p>Amphitheatre 17/06/2022 8:00am - 10:00am
-                </p>
-                <p>9:15pm</p>
+                <p>{denied.username}</p>
+            <p>{denied.eventcenter}
+            </p>
+            <p>{denied.duration}</p>
+            <p>{denied.desc}</p>
+            <p>{denied.dateofbooking}</p>
+            <p>{denied.duration}</p>
             </div>
         );
     }
