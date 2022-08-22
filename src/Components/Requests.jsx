@@ -16,11 +16,28 @@ const Requests = ({active1, setActive1}) => {
    const [bookData, setBookData] = useState([]);
    useEffect(() => {
     const fetchbookData = async () => {
-      const res = await axios.get(`${config.baseURL}/api/bookings`);
+      const res = await axios.get(`${config.baseURL}/api/pending`);
       setBookData(res.data)
     };
     fetchbookData();
    }, []);
+   const [approveData, setApprovedData] = useState([]);
+   useEffect(() => {
+     const fetchapproveData = async () => {
+      const res = await axios.get(`${config.baseURL}/api/approved`);
+      setApprovedData(res.data)
+     };
+     fetchapproveData();
+   }, []);
+
+   const [deniedData, setDeniedData] = useState([]);
+   useEffect(() => {
+    const fetchdeniedData = async () => {
+      const res = await axios.get(`${config.baseURL}/api/approved`);
+      setDeniedData(res.data)
+    };
+    fetchdeniedData();
+   }, [])
   return (
     <div>
       <div className='request_holder'>
@@ -55,8 +72,8 @@ const Requests = ({active1, setActive1}) => {
        <div className='holder_content'>
         
        {active === "Pending1" && <Pending active1={active1} setActive1={setActive1} bookData={bookData} />}
-      {active === "Approved1" && <Approved/>}
-      {active === "Denied1" && <Declined/>}
+      {active === "Approved1" && <Approved approveData={approveData}/>}
+      {active === "Denied1" && <Declined deniedData={deniedData}/>}
       {active === "Double1" && <DoubleBooking/>}
        </div>
       </div>

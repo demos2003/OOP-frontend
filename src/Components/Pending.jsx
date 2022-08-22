@@ -6,8 +6,8 @@ const Pending2 =({book}) =>{
    return(
       <div>
         <div className='request_info' onClick={() => setActive1("Test")}>
-            <p>Nasiru Iyi</p>
-            <p>Amphitheatre 17/06/2022 8:00am - 10:00am
+            <p>{book.name}</p>
+            <p>{}
             </p>
             <p>9:15pm</p>
          </div>

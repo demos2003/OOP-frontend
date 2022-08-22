@@ -1,3 +1,3 @@
 export default {
-    "baseURL": "https://oop-eventschedulingsystem.herokuapp.com/"
+    "baseURL": "https://oop-eventschedulingsystem.herokuapp.com"
 }

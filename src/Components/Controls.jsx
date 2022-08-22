@@ -7,8 +7,7 @@ import {MdOutlineModeEdit, MdOutlineDeleteOutline} from "react-icons/md"
 const Controls = () => {
     const [controls, edit] = useState(false);
     const [del, deleteBtn] = useState(false);
-
-    return (
+return (
         <div>
             <div className='controls'>
                 <button className='edit-btn' onClick={() => edit(true)} style={{ marginRight: "20px", marginLeft: "10%" }}><b><MdOutlineModeEdit/></b></button>
