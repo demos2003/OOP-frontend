@@ -12,23 +12,32 @@ import Admin from "./Views/Admin";
 import ClientHome from "./Views/ClientHome";
 import ClientBook from "./Views/ClientBook";
 import { useContext } from "react";
-// import {Context} from 
+import { Context, ContextA } from "./Components/context/Context";
 
 function App() {
-  // const { user } = useContext(Context);
+  const { user } = useContext(Context);
+  const { admin } = useContext(ContextA);
+  // console.log(user);
+
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/dashboard" element={<ClientHome />} />
-          <Route path="/dashboard/book" element={<ClientBook />} />
+          <Route path="/admin" element={admin ? <Admin/> : <AdminLogin/>} />
+          <Route
+            path="/dashboard"
+            element={user ? <ClientHome /> : <Landing />}
+          />
+          <Route
+            path="/dashboard/book"
+            element={user ? <ClientBook user={user}/> : <Landing />}
+          />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

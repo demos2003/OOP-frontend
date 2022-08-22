@@ -17,7 +17,7 @@ const Table2 = ({ post }) => {
   }
   return (
     <div>
-      <table class="table table-bordered ">
+      <table className="table table-bordered ">
         <thead>
           <tr>
             <th scope="col" className='SN'>#</th>
