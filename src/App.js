@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  BrowserRouter
+  BrowserRouter,
 } from "react-router-dom";
 import "./App.css";
 import Landing from "./Views/Landing";
@@ -11,8 +11,12 @@ import AdminLogin from "./Views/AdminLogin";
 import Admin from "./Views/Admin";
 import ClientHome from "./Views/ClientHome";
 import ClientBook from "./Views/ClientBook";
+import { useContext } from "react";
+// import {Context} from 
 
 function App() {
+  // const { user } = useContext(Context);
+
   return (
     <div className="App">
       <BrowserRouter>

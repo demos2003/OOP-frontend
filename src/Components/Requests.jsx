@@ -1,20 +1,20 @@
-import React from 'react'
-import './requests.css'
-import {RiCheckDoubleLine} from 'react-icons/ri'
-import {MdOutlineCancel, MdPendingActions} from 'react-icons/md'
-import {AiOutlineCheckCircle} from 'react-icons/ai'
-import { useState, useEffect } from 'react'
-import Pending from './Pending'
-import Approved from './Approved'
-import Declined from './Declined'
-import DoubleBooking from './DoubleBooking'
-import axios from 'axios'
-import config from '../config'
+import React from "react";
+import "./requests.css";
+import { RiCheckDoubleLine } from "react-icons/ri";
+import { MdOutlineCancel, MdPendingActions } from "react-icons/md";
+import { AiOutlineCheckCircle } from "react-icons/ai";
+import { useState, useEffect } from "react";
+import Pending from "./Pending";
+import Approved from "./Approved";
+import Declined from "./Declined";
+import DoubleBooking from "./DoubleBooking";
+import axios from "axios";
+import config from "../config";
 
-const Requests = ({active1, setActive1}) => {
-   const [active, setActive] = useState("Pending1")
-   const [bookData, setBookData] = useState([]);
-   useEffect(() => {
+const Requests = ({ active1, setActive1 }) => {
+  const [active, setActive] = useState("Pending1");
+  const [bookData, setBookData] = useState([]);
+  useEffect(() => {
     const fetchbookData = async () => {
       const res = await axios.get(`${config.baseURL}/api/pending`);
       setBookData(res.data)
@@ -76,9 +76,10 @@ const Requests = ({active1, setActive1}) => {
       {active === "Denied1" && <Declined deniedData={deniedData}/>}
       {active === "Double1" && <DoubleBooking/>}
        </div>
+      
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Requests
+export default Requests;
