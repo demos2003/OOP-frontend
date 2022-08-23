@@ -117,9 +117,9 @@ export const ClientHomepage = ({ user }) => {
           </li>
         </ul>
         <div className="outlet">
-          {activeTab === "tab1" && <UpcomingEventsTab />}
-          {activeTab === "tab2" && <PendingEventsTab />}
-          {activeTab === "tab3" && <DeniedEventsTab />}
+          {activeTab === "tab1" && <UpcomingEventsTab approvedData={approvedData} />}
+          {activeTab === "tab2" && <PendingEventsTab pendingData={pendingData} />}
+          {activeTab === "tab3" && <DeniedEventsTab  deniedData={deniedData}/>}
         </div>
       </div>
     </div>
