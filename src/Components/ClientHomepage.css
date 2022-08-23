@@ -1,6 +1,7 @@
 .client-home-container {
   margin-top: 50px;
   padding: 20px;
+  /* border: 1px solid red */
 }
 
 .top-section {
@@ -162,6 +163,16 @@ ul.nav li.active {
   .top-section{
     margin-left: 5%;
     margin-right: 5%;
+  }
+  
+}
+
+
+@media screen and (max-width:1920px) {
+  .top-section{
+    margin-left: 16%;
+    margin-right: 16%;
+    /* border: 1px solid black; */
   }
   
 }
