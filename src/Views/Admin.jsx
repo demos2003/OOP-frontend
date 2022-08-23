@@ -6,8 +6,6 @@ import { useState } from "react";
 import AdminEventCenters from "../Components/AdminEventCenters";
 import { BiMessage } from "react-icons/bi";
 import { BsCalendar4Event } from "react-icons/bs";
-import { AiOutlineStar } from "react-icons/ai"     
-import { RiDraftLine } from "react-icons/ri"
 import Details from "../Components/Details";
 
 

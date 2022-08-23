@@ -3,10 +3,8 @@ import UpcomingEventsTab from "./UpcomingEventsTab";
 import PendingEventsTab from "./PendingEventsTab";
 import "./ClientHomepage.css";
 
-export const ClientHomepage = () => {
-
+export const ClientHomepage = ({ user }) => {
   const [activeTab, setActiveTab] = useState("tab1");
-
   const handleTab1 = () => {
     setActiveTab("tab1");
   };
@@ -20,20 +18,19 @@ export const ClientHomepage = () => {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let date = new Date();
   let day = weekday[date.getDay()];
   let dayNum = date.getDate();
   let month = date.toLocaleString("en-us", { month: "long" });
   let year = date.getFullYear();
-
   return (
     <div className="client-home-container">
       <div className="top-section">
         <div className="welcome-section">
           <div>
-            <h1 className="welcome-header">Hi!</h1>
+            <h1 className="welcome-header">Hi! {user.fullname}</h1>
             <p className="welcome-text">
               Welcome to the event scheduling system. Here, you can see all your
               upcoming events, events that are pending approval from the admin
@@ -59,24 +56,24 @@ export const ClientHomepage = () => {
 
       <hr />
       <div className="Tabs">
-      <ul className="nav">
-        <li
-          className={activeTab === "tab1" ? "active" : ""}
-          onClick={handleTab1}
-        >
-          Upcoming Events
-        </li>
-        <li
-          className={activeTab === "tab2" ? "active" : ""}
-          onClick={handleTab2}
-        >
-          Pending Events
-        </li>
-      </ul>
-      <div className="outlet">
-        {activeTab === "tab1" ? <UpcomingEventsTab /> : <PendingEventsTab />}
+        <ul className="nav">
+          <li
+            className={activeTab === "tab1" ? "active" : ""}
+            onClick={handleTab1}
+          >
+            Upcoming Events
+          </li>
+          <li
+            className={activeTab === "tab2" ? "active" : ""}
+            onClick={handleTab2}
+          >
+            Pending Events
+          </li>
+        </ul>
+        <div className="outlet">
+          {activeTab === "tab1" ? <UpcomingEventsTab /> : <PendingEventsTab />}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

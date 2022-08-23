@@ -30,7 +30,7 @@ const ClientBookForm = ({ user }) => {
         dateofevent,
         timeofevent,
       });
-      res.data && window.location.reload();
+      res.data && window.location.replace("/dashboard");
     } catch (err) {
       console.log(err);
       setError(true);
