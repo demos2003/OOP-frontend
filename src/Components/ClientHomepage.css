@@ -89,12 +89,20 @@ ul.nav li.active {
   color: #ff3259;
 }
 
+.UpcomingEventsTab,
+.PendingEventsTab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .event-container {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   margin: 20px;
   padding: 20px;
-  width: 35%;
+  width: 30%;
   min-height: 250px;
 }
 
