@@ -12,7 +12,7 @@ const PendingEventsTab = () => {
             className="event-image"
           />
         </div>
-        <div className="event-date">07, December 2022 | 3 hours</div>
+        <div className="event-date">07, December 2022 | 09:00 | 3 hours</div>
         <div className="event-name">Games Night</div>
         <div className="event-location">
           <div className="location-block">
@@ -33,7 +33,7 @@ const PendingEventsTab = () => {
             className="event-image"
           />
         </div>
-        <div className="event-date">14, February 2022 | 2 hours</div>
+        <div className="event-date">14, February 2022 | 13:00 | 2 hours</div>
         <div className="event-name">Celebration Party</div>
         <div className="event-location">
           <div className="location-block">
