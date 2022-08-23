@@ -3,11 +3,11 @@ import { ClientNav } from "../Components/ClientNav";
 import { ClientHomepage } from "../Components/ClientHomepage";
 import { Footer } from "../Components/Footer";
 
-const ClientHome = () => {
+const ClientHome = ({ user }) => {
   return (
     <div className="body">
       <ClientNav />
-      <ClientHomepage />
+      <ClientHomepage user={user}/>
       <Footer />
     </div>
   );

@@ -17,8 +17,6 @@ import { Context, ContextA } from "./Components/context/Context";
 function App() {
   const { user } = useContext(Context);
   const { admin } = useContext(ContextA);
-  // console.log(user);
-
 
   return (
     <div className="App">
@@ -27,14 +25,14 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/admin" element={admin ? <Admin/> : <AdminLogin/>} />
+          <Route path="/admin" element={admin ? <Admin /> : <AdminLogin />} />
           <Route
             path="/dashboard"
-            element={user ? <ClientHome /> : <Landing />}
+            element={user ? <ClientHome user={user} /> : <Landing />}
           />
           <Route
             path="/dashboard/book"
-            element={user ? <ClientBook user={user}/> : <Landing />}
+            element={user ? <ClientBook user={user} /> : <Landing />}
           />
         </Routes>
       </Router>
