@@ -24,18 +24,17 @@ const Admin = () => {
             <img className="babcock_logo" src={process.env.PUBLIC_URL + "images/Picture1.png"}
              alt="babcock logo" />
           </div>
+          <a onClick={() => setActive1("Request")} className="pointer">
           <p className="request-btn">
-            <a onClick={() => setActive1("Request")}>
               <b><BiMessage /></b>
-              <b className="space">Requests</b>
-            </a>
+              <b className="space">Requests</b>  
           </p>
+          </a>
+          <a onClick={() => setActive1("Events")} className="pointer">
           <p className="event_centers-btn">
-            <a onClick={() => setActive1("Events")}>
               <b><BsCalendar4Event /></b>
-              <b className="space">Events Centers</b>
-            </a>
-          </p>
+              <b className="space">Events Centers</b></p>
+          </a>
         </div>     
        <div className="admin_request">
           {active1 === "Request" && <Requests active1={active1} setActive1={setActive1} active2={active2} setActive2={setActive2} />}

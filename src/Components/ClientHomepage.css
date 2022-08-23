@@ -156,3 +156,12 @@ ul.nav li.active {
     display: none;
   }
 }
+
+
+@media screen and (max-width:1440px) {
+  .top-section{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+}
