@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { ContextA } from "./context/Context";
 import { useContext } from "react";
 
-const AdminNav = () => {
+const AdminNav = ({ adminD }) => {
   const { admin, dispatch } = useContext(ContextA);
   const handleLogout = () => {
     dispatch({ type: "LOGOUTA" });
@@ -16,7 +16,12 @@ const AdminNav = () => {
   return (
     <div className="topNav">
       <div className="admin_title">ADMIN PANEL</div>
-      <button className="logout_btn btn" style={{ color: "white" }} onClick={handleLogout}>
+      <div className="admin_title">Welcome {adminD.fullname}</div>
+      <button
+        className="logout_btn btn"
+        style={{ color: "white" }}
+        onClick={handleLogout}
+      >
         Logout
       </button>
       <div class="dropdown drop">

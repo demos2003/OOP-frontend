@@ -3,9 +3,15 @@ import UpcomingEventsTab from "./UpcomingEventsTab";
 import PendingEventsTab from "./PendingEventsTab";
 import DeniedEventsTab from "./DeniedEventTab";
 import "./ClientHomepage.css";
+import axios from "axios";
+import { useEffect } from "react";
+import config from "../config";
 
 export const ClientHomepage = ({ user }) => {
   const [activeTab, setActiveTab] = useState("tab1");
+  const [pendingData, setPendingData] = useState([]);
+  const [approvedData, setApprovedData] = useState([]);
+  const [deniedData, setDeniedData] = useState([]);
   const handleTab1 = () => {
     setActiveTab("tab1");
   };
@@ -29,6 +35,36 @@ export const ClientHomepage = ({ user }) => {
   let dayNum = date.getDate();
   let month = date.toLocaleString("en-us", { month: "long" });
   let year = date.getFullYear();
+
+  useEffect(() => {
+    const fetchPendingData = async () => {
+      const res = await axios.get(
+        `${config.baseURL}/api/book/${user.fullname}/pending`
+      );
+      setPendingData(res.data);
+    };
+    fetchPendingData();
+  }, []);
+
+  useEffect(() => {
+    const fetchApprovedData = async () => {
+      const res = await axios.get(
+        `${config.baseURL}/api/book/${user.fullname}/approve`
+      );
+      setApprovedData(res.data);
+    };
+    fetchApprovedData();
+  }, []);
+
+  useEffect(() => {
+    const fetchDeniedData = async () => {
+      const res = await axios.get(
+        `${config.baseURL}/api/book/${user.fullname}/deny`
+      );
+      setDeniedData(res.data);
+    };
+    fetchDeniedData();
+  }, []);
   return (
     <div className="client-home-container">
       <div className="top-section">

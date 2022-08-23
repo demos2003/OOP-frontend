@@ -25,7 +25,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/admin" element={admin ? <Admin /> : <AdminLogin />} />
+          <Route path="/admin" element={admin ? <Admin admin={admin} /> : <AdminLogin />} />
           <Route
             path="/dashboard"
             element={user ? <ClientHome user={user} /> : <Landing />}
