@@ -63,11 +63,38 @@ ul.nav li {
   cursor: pointer;
   padding: 20px;
   font-size: 1.3rem;
+  position: relative;
   transition: all 0.2s;
+}
+
+ul.nav li:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #ff3259;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+ul.nav li.active:after {
+  width: 100%;
+  left: 0;
 }
 
 ul.nav li.active {
   color: #ff3259;
+}
+
+.UpcomingEventsTab,
+.PendingEventsTab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .event-container {
@@ -75,11 +102,11 @@ ul.nav li.active {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   margin: 20px;
   padding: 20px;
-  width: 35%;
+  width: 30%;
   min-height: 250px;
 }
 
-.event-date{
+.event-date {
   margin: 15px 0 5px;
   color: #888888;
 }
@@ -96,7 +123,7 @@ ul.nav li.active {
 }
 
 .event-image-container {
-  background-color:#f1f1f1;
+  background-color: #f1f1f1;
   border-radius: 20px;
   text-align: center;
 }
