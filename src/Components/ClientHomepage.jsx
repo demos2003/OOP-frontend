@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UpcomingEventsTab from "./UpcomingEventsTab";
 import PendingEventsTab from "./PendingEventsTab";
+import DeniedEventsTab from "./DeniedEventTab";
 import "./ClientHomepage.css";
 
 export const ClientHomepage = ({ user }) => {
@@ -10,6 +11,9 @@ export const ClientHomepage = ({ user }) => {
   };
   const handleTab2 = () => {
     setActiveTab("tab2");
+  };
+  const handleTab3 = () => {
+    setActiveTab("tab3");
   };
   const weekday = [
     "Sunday",
@@ -69,9 +73,17 @@ export const ClientHomepage = ({ user }) => {
           >
             Pending Events
           </li>
+          <li
+            className={activeTab === "tab3" ? "active" : ""}
+            onClick={handleTab3}
+          >
+            Denied Events
+          </li>
         </ul>
         <div className="outlet">
-          {activeTab === "tab1" ? <UpcomingEventsTab /> : <PendingEventsTab />}
+          {activeTab === "tab1" && <UpcomingEventsTab />}
+          {activeTab === "tab2" && <PendingEventsTab />}
+          {activeTab === "tab3" && <DeniedEventsTab />}
         </div>
       </div>
     </div>
