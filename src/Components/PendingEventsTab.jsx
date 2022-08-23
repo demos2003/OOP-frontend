@@ -1,50 +1,37 @@
 import React from "react";
 import "./ClientHomepage.css";
 
-const PendingEventsTab = () => {
-  return (
-    <div className="PendingEventsTab">
+const PendingEventsTab = ({pendingData}) => {
+  const PendingEventCard = ({pending}) => {
+    return(
       <div className="event-container">
       <div className="event-image-container">
-          <img
-            src={process.env.PUBLIC_URL + "images/events-pending.svg"}
-            alt="welcome"
-            className="event-image"
-          />
-        </div>
-        <div className="event-date">07, December 2022 | 09:00 | 3 hours</div>
-        <div className="event-name">Games Night</div>
-        <div className="event-location">
-          <div className="location-block">
-            <span>
-              <img src={process.env.PUBLIC_URL + "icons/location.svg"} alt="" />
-            </span>{" "}
-            Amphitheatre
-          </div>
-          <div className="location-block">Status: Denied</div>
-        </div>
+        <img
+          src={process.env.PUBLIC_URL + "images/events-pending.svg"}
+          alt="welcome"
+          className="event-image"
+        />
       </div>
-
-      <div className="event-container">
-        <div className="event-image-container">
-          <img
-            src={process.env.PUBLIC_URL + "images/events-pending.svg"}
-            alt="welcome"
-            className="event-image"
-          />
+      <div className="event-date">{pending.dateofevent} | {pending.timeofevent} | {pending.duration} hours</div>
+      <div className="event-name">{pending.eventname}</div>
+      <div className="event-location">
+        <div className="location-block">
+          <span>
+            <img src={process.env.PUBLIC_URL + "icons/location.svg"} alt="" />
+          </span>{" "}
+          {pending.eventcenter}
         </div>
-        <div className="event-date">14, February 2022 | 13:00 | 2 hours</div>
-        <div className="event-name">Celebration Party</div>
-        <div className="event-location">
-          <div className="location-block">
-            <span>
-              <img src={process.env.PUBLIC_URL + "icons/location.svg"} alt="" />
-            </span>{" "}
-            Bethel Activity Hall
-          </div>
-          <div className="location-block">Status: Under Review</div>
-        </div>
+        <div className="location-block">Status: Under Review</div>
       </div>
+    </div>
+    )
+  }
+  return (
+    <div className="PendingEventsTab">
+  {pendingData.map((p) =>(
+       <PendingEventCard pending={p}/> 
+  )) }
+       
     </div>
   );
 };

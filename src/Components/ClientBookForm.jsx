@@ -36,6 +36,14 @@ const ClientBookForm = ({ user }) => {
     }
   };
 
+  const EventOptions = () => {
+    return(
+      <>
+      <option value="Stadium">Babcock Stadium</option>
+      </>
+      )
+}
+
   return (
     <div>
       <div className="content-container">
@@ -74,20 +82,14 @@ const ClientBookForm = ({ user }) => {
               <label className="event-label" htmlFor="eventLocation">
                 Event Location
               </label>
-              <select
+              
+             <select
                 name="eventLocation"
                 className="form-input"
                 required
                 onChange={(e) => setEventcenter(e.target.value)}
-              >
-                <option value="Stadium">Babcock Stadium</option>
-                <option value="Amphitheatre">Babcock Amphitheatre</option>
-                <option value="Auditorium">BBS Auditorium</option>
-                <option value="Bethel Activity Hall">
-                  Bethel Activity Hall
-                </option>
-                <option value="WRA">Wilfred Riley Auditorium (WRA)</option>
-                <option value="SCT">Slivanus Chioma Theatre (SCT)</option>
+              > 
+              <EventOptions/>
               </select>
             </div>
           </div>
