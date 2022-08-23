@@ -3,7 +3,7 @@ import "./ClientBookForm.css";
 import axios from "axios";
 import config from "../config";
 
-const ClientBookForm = ({ user }) => {
+const ClientBookForm = ({ user, locations }) => {
   const [fullname, setFullname] = useState(user.fullname);
   const [email, setEmail] = useState(user.email);
   const [phoneno, setPhoneno] = useState(user.phoneNo);
@@ -36,13 +36,13 @@ const ClientBookForm = ({ user }) => {
     }
   };
 
-  const EventOptions = () => {
-    return(
+  const EventOptions = ({ location }) => {
+    return (
       <>
-      <option value="Stadium">Babcock Stadium</option>
+        <option value={location.centername}>{location.centername}</option>
       </>
-      )
-}
+    );
+  };
 
   return (
     <div>
@@ -82,14 +82,16 @@ const ClientBookForm = ({ user }) => {
               <label className="event-label" htmlFor="eventLocation">
                 Event Location
               </label>
-              
-             <select
+
+              <select
                 name="eventLocation"
                 className="form-input"
                 required
                 onChange={(e) => setEventcenter(e.target.value)}
-              > 
-              <EventOptions/>
+              >
+                {locations.map((p) => (
+                  <EventOptions location={p} />
+                ))}
               </select>
             </div>
           </div>

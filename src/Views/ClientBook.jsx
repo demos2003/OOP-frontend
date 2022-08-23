@@ -19,7 +19,7 @@ const ClientBook = ({user}) => {
   return (
     <div className="body">
       <ClientNav />
-      <ClientBookForm user={user} />
+      <ClientBookForm user={user} locations={locations}/>
       <Footer />
     </div>
   );
