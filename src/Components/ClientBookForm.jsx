@@ -14,7 +14,6 @@ const ClientBookForm = ({ user }) => {
   const [dateofevent, setDateofevent] = useState("");
   const [timeofevent, setTimeofevent] = useState("");
   const [error, setError] = useState(false);
-  console.log(phoneno);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
