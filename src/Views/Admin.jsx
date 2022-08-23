@@ -20,6 +20,10 @@ const Admin = () => {
       <AdminNav />
       <div className="admin_panelHolder">
         <div className="sidebar">
+          <div>
+            <img className="babcock_logo" src={process.env.PUBLIC_URL + "images/Picture1.png"}
+             alt="babcock logo" />
+          </div>
           <p className="request-btn">
             <a onClick={() => setActive1("Request")}>
               <b><BiMessage /></b>

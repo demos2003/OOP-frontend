@@ -8,6 +8,17 @@
     padding-bottom: 15px; 
     padding-top: 0;
 }
+
+
+.edit_btn{
+    background-color: #277BC0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .delete-btn{
     background-color: #F32424;
     color: white;

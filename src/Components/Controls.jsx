@@ -122,6 +122,13 @@ const Controls = ({ path }) => {
                 />
               )}
             </div>
+            <button
+           style={{backgroundColor:"blue" }}
+           className="edit_btn"
+            >
+            Save
+           </button>
+
           </form>
         </Popup1>
         <button
