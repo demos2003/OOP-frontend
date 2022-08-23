@@ -1,20 +1,19 @@
-import React from 'react'
-import Controls from './Controls'
+import React from "react";
+import Controls from "./Controls";
 
 const Table2 = ({ center }) => {
-    return (
-     
-        <tbody>
+  return (
+    <tbody>
       <tr>
-        {/* <th scope="row" className='SN'>1</th> */}
-        <td>{center.eventcentername}</td>
-        <td>{center.desc}</td>
+        <td>{center.centername}</td>
         <td>{center.capacity}</td>
-        <td><Controls /></td>
+        <td>{center.description}</td>
+        <td>
+          <Controls path={center._id} />
+        </td>
       </tr>
-      </tbody>
-     
-    );
-  }
+    </tbody>
+  );
+};
 
-export default Table2
+export default Table2;

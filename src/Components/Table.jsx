@@ -1,10 +1,8 @@
-import React from 'react'
-import './table.css'
+import React from "react";
+import "./table.css";
 
-
-import Table2 from './Table2'
+import Table2 from "./Table2";
 const Table = ({ centers }) => {
-
   return (
     <div>
       <table className="table table-bordered ">
@@ -17,15 +15,13 @@ const Table = ({ centers }) => {
             <th scope="col">Controls</th>
           </tr>
         </thead>
-        
-        {centers.map((p) => (
-              <Table2 center={p} />
-            ))}
-      </table>
-      
-      
-    </div>
-  )
-}
 
-export default Table
+        {centers.map((p) => (
+          <Table2 center={p} />
+        ))}
+      </table>
+    </div>
+  );
+};
+
+export default Table;
