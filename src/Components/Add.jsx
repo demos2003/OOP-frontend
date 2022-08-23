@@ -8,23 +8,23 @@ import axios from "axios";
 
 const Add = () => {
   const [addNew, setAddNew] = useState(false);
-  const [eventcentername, setEventcentername] = useState("");
+  const [centername, setCentername] = useState("");
   const [capacity, setCapacity] = useState("");
-  const [desc, setDesc] = useState("");
+  const [description, setDescription] = useState("");
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post(`${config.baseURL}/api/eventcenters`, {
-        eventcentername,
+      const res = await axios.post(`${config.baseURL}/api/location`, {
+        centername,
         capacity,
-        desc,
+        description,
       });
       res.data && window.location.reload();
     } catch (err) {
-       console.log(err)
+      console.log(err);
       setError(true);
     }
   };
@@ -48,15 +48,15 @@ const Add = () => {
               type="email"
               className="form-control"
               id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              aria-descriptionribedby="emailHelp"
               placeholder="Enter Location Name"
-              onChange={(e) => setEventcentername(e.target.value)}
+              onChange={(e) => setCentername(e.target.value)}
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label>Location Capacity</label>
             <select
-              class="form-control"
+              className="form-control"
               id="exampleFormControlSelect1"
               onChange={(e) => setCapacity(e.target.value)}
             >
@@ -70,10 +70,10 @@ const Add = () => {
           <div className="form-group">
             <label>Location Description</label>
             <textarea
-              class="form-control"
+              className="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
-              onChange={(e) => setDesc(e.target.value)}
+              onChange={(e) => setDescription(e.target.value)}
             />
           </div>
           <button
