@@ -25,3 +25,12 @@
 .EventHeader{
     text-align: center;
 }
+
+
+@media screen and (max-width:1024px) {
+
+    .request_holder1{
+        margin-left: 0px;
+    }
+    
+}

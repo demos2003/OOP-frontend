@@ -39,7 +39,7 @@ const EventCenters = () => {
       
      
       </div>
-      <AutoPlay/>
+      <AutoPlay className="slider_responsive"/>
     </div>
     
   )

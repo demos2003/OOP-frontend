@@ -40,31 +40,27 @@ const Requests = ({ active1, setActive1, active2, setActive2 }) => {
   }, [])
   return (
     <div>
-      <div className='request_holder'>
+       <div className='request_holder'>
         <div className='holder_nav'>
           <div>
-            <p className='options'>
-              <MdPendingActions className='nav_icon' />
-              <a onClick={() => setActive("Pending1")}>
-                Pending
-              </a>
-            </p>
-            <p className='options'>
-              <AiOutlineCheckCircle className='nav_icon' />
-              <a onClick={() => setActive("Approved1")}>
+            <a onClick={() => setActive("Pending1")} className='options3'>
+              <p className='options'>
+                <MdPendingActions className='nav_icon' />
+                Pending </p>
+            </a>
+            <a onClick={() => setActive("Approved1")} className='options3'>
+              <p className='options'>
+                <AiOutlineCheckCircle className='nav_icon' />
                 Approved
-              </a>
-            </p>
-            <p className='options'>
-              <MdOutlineCancel className='nav_icon' />
-              <a onClick={() => setActive("Denied1")}>
+              </p>
+            </a>
+            <a onClick={() => setActive("Denied1")} className='options3'>
+              <p className='options'>
+                <MdOutlineCancel className='nav_icon' />
                 Denied
-              </a> </p>
-            <p className='options'>
-              <RiCheckDoubleLine className='nav_icon' />
-              <a onClick={() => setActive("Double1")}>
-                Double Booked
-              </a> </p>
+              </p>
+            </a>
+
           </div>
 
         </div>

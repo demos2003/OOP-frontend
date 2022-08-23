@@ -25,19 +25,20 @@
     text-align: center;
     margin-bottom: 50px;
     border: 3px solid white;
-    /* border-radius: 5px; */
     margin: 9px;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-    /* transition: all 1s; */
-}
-.center_desc-holder:hover{
-    /* margin-bottom: 5px; */
+   
 }
 
-/* .move{
-  transition: all 1s; 
-}
 
-.move:hover{
-    margin-top: 5px;
-} */
+
+
+@media screen and (max-width:1024px) {
+   .sliders{
+        display: none !important;
+    }
+
+    .center_desc-title{
+        display: none !important;   
+    }
+    
+}

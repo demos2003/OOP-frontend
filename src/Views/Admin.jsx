@@ -32,18 +32,6 @@ const Admin = () => {
               <b className="space">Events Centers</b>
             </a>
           </p>
-          <p className="event_centers-btn">
-            <a onClick={() => setActive1("Events")}>
-              <b><AiOutlineStar /></b>
-              <b className="space">Starred Event</b>
-            </a>
-          </p>
-          <p className="event_centers-btn">
-            <a onClick={() => setActive1("Events")}>
-              <b><RiDraftLine /></b>
-              <b className="space">Draft</b>
-            </a>
-          </p>
         </div>     
        <div className="admin_request">
           {active1 === "Request" && <Requests active1={active1} setActive1={setActive1} active2={active2} setActive2={setActive2} />}

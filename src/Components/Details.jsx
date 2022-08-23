@@ -72,6 +72,7 @@ const Details = ({setActive1, active2, setActive2}) => {
           <div className='action_button'>
           <p><button className='accept_btn'>Accept</button></p>
           <p><button className='decline_btn'>Decline</button></p>
+          <p><button className='submit_btn'>Submit</button></p>
           </div>
         </div>
         

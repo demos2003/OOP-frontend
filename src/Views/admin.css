@@ -6,7 +6,7 @@
 .admin_panelHolder {
   display: flex;
   flex-direction: row;
-  padding-top: 70px;
+  padding-top: 20px;
 }
 
 .sidebar {
@@ -58,3 +58,4 @@
 b{
   font-size: 18px;
 }
+
