@@ -22,17 +22,17 @@
   min-width: 200px;
 }
 
-.today{
-    font-size: 1.55rem;
+.today {
+  font-size: 1.55rem;
 }
 
-.day{
-    font-weight: 700;
+.day {
+  font-weight: 700;
 }
 
-.year{
-    font-size: 3rem;
-    font-weight: 700;
+.year {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .welcome-header {
@@ -59,52 +59,50 @@
   font-size: 2.2rem;
 }
 
-.event-header.pending {
-  color: gray;
+ul.nav li {
+  cursor: pointer;
+  padding: 20px;
+  font-size: 1.3rem;
+  transition: all 0.2s;
+}
+
+ul.nav li.active {
+  color: #ff3259;
 }
 
 .event-container {
-  display: flex;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  margin-bottom: 40px;
+  margin: 20px;
+  padding: 20px;
+  width: 35%;
+  min-height: 250px;
 }
 
-.event-date {
-  display: grid;
-  place-content: center;
-  text-align: center;
-  background-color: #ff3259;
-  color: #f1f1f1;
-  padding: 10px;
-  border-radius: 20px 0 0 20px;
-  margin: 0 10px 0 0;
-}
-
-.event-date.pending {
-  background-color: grey;
-}
-
-.event-details {
-  margin: 5px 0 5px 20px;
-}
-
-.event-day,
-.event-month {
-  font-size: 2rem;
-}
-
-.event-month {
-  font-weight: 800;
+.event-date{
+  margin: 15px 0 5px;
+  color: #888888;
 }
 
 .event-name {
   font-size: 1.7rem;
   font-weight: 700;
+  margin: 10px 0;
 }
 
-.event-location,
-.event-time,
-.event-status {
-  font-size: 1.3rem;
+.location-block {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.event-image-container {
+  background-color:#f1f1f1;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.event-image {
+  height: 300px;
+  width: 360px;
+  padding: 10px;
 }
