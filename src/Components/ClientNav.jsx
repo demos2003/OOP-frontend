@@ -11,9 +11,8 @@ export const ClientNav = () => {
       <Link to="/dashboard/book" className="client-nav-link">
         Book Event
       </Link>
-      <Link to="/" className="logo-img">
-        <img className="logo-img" src="icons/logo.svg" alt="logo" />
-      </Link>
+      <button className="client-logout">Logout</button>
+     
     </div>
   );
 };

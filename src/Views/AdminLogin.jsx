@@ -1,29 +1,28 @@
 import React from "react";
 import "./adminlogin.css";
-import { useContext, useRef } from 'react';
-import { Context } from "../Components/context/Context"
-import axios from "axios"
-import config from "../config"
+import { useContext, useRef } from "react";
+import { ContextA } from "../Components/context/Context";
+import axios from "axios";
+import config from "../config";
 
 const AdminLogin = () => {
   const userRef = useRef();
   const passwordRef = useRef();
-  const { dispatch, isFetching } = useContext(Context);
-  // console.log(dispatch)
+  const { dispatch, isFetching } = useContext(ContextA);
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-      dispatch({ type: "LOGIN_START" });
-      try {
-          const res = await axios.post(`${config.baseURL}/api/auth/adminLogin`, {
-              email: userRef.current.value,
-              password: passwordRef.current.value,
-          });
-          dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
-          res.data && window.location.replace("/admin");
-      } catch (err) {
-          dispatch({ type: "LOGIN_FAILURE" });
-      }
+    e.preventDefault();
+    dispatch({ type: "LOGIN_STARTA" });
+    try {
+      const res = await axios.post(`${config.baseURL}/api/auth/adminLogin`, {
+        email: userRef.current.value,
+        password: passwordRef.current.value,
+      });
+      dispatch({ type: "LOGIN_SUCCESSA", payload: res.data });
+      res.data && window.location.replace("/admin");
+    } catch (err) {
+      dispatch({ type: "LOGIN_FAILUREA" });
+    }
   };
   return (
     <div className="adminlogin_background">
@@ -36,7 +35,7 @@ const AdminLogin = () => {
             </h2>
             <div className="form-row">
               <div className="form-group form-edit">
-                <label >Email</label>
+                <label>Email</label>
                 <input
                   type="email"
                   className="form-control input-edit"
@@ -46,7 +45,7 @@ const AdminLogin = () => {
                 ></input>
               </div>
               <div className="form-group">
-                <label >Password</label>
+                <label>Password</label>
                 <input
                   type="password"
                   className="form-control"
@@ -57,7 +56,11 @@ const AdminLogin = () => {
               </div>
             </div>
 
-            <button type="submit"  disabled={isFetching} className="btn btn-primary admin-btn">
+            <button
+              type="submit"
+              disabled={isFetching}
+              className="btn btn-primary admin-btn"
+            >
               Login
             </button>
           </form>

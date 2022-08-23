@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import UpcomingEventsTab from "./UpcomingEventsTab";
+import PendingEventsTab from "./PendingEventsTab";
 import "./ClientHomepage.css";
 
 export const ClientHomepage = () => {
+
+  const [activeTab, setActiveTab] = useState("tab1");
+
+  const handleTab1 = () => {
+    setActiveTab("tab1");
+  };
+  const handleTab2 = () => {
+    setActiveTab("tab2");
+  };
   const weekday = [
     "Sunday",
     "Monday",
@@ -22,7 +33,7 @@ export const ClientHomepage = () => {
       <div className="top-section">
         <div className="welcome-section">
           <div>
-            <h1 className="welcome-header">Hi John Doe!</h1>
+            <h1 className="welcome-header">Hi!</h1>
             <p className="welcome-text">
               Welcome to the event scheduling system. Here, you can see all your
               upcoming events, events that are pending approval from the admin
@@ -47,48 +58,25 @@ export const ClientHomepage = () => {
       </div>
 
       <hr />
-
-      <h1 className="event-header">Upcoming Events</h1>
-      <div className="event-container">
-        <div className="event-date">
-          <div className="event-day">20</div>
-          <div className="event-month">AUG</div>
-        </div>
-        <div className="event-details">
-          <div className="event-name">Freshers Fest</div>
-          <div className="event-location">Location: Babcock Stadium</div>
-          <div className="event-time">Time: 3pm - 8pm</div>
-        </div>
+      <div className="Tabs">
+      <ul className="nav">
+        <li
+          className={activeTab === "tab1" ? "active" : ""}
+          onClick={handleTab1}
+        >
+          Upcoming Events
+        </li>
+        <li
+          className={activeTab === "tab2" ? "active" : ""}
+          onClick={handleTab2}
+        >
+          Pending Events
+        </li>
+      </ul>
+      <div className="outlet">
+        {activeTab === "tab1" ? <UpcomingEventsTab /> : <PendingEventsTab />}
       </div>
-
-      <hr />
-
-      <h1 className="event-header pending">Pending Events</h1>
-      <div className="event-container">
-        <div className="event-date pending">
-          <div className="event-day">07</div>
-          <div className="event-month">DEC</div>
-        </div>
-        <div className="event-details">
-          <div className="event-name">Games Night</div>
-          <div className="event-location">Location: Amphitheatre</div>
-          <div className="event-time">Time: 6pm - 9pm</div>
-          <div className="event-status">Status: Denied</div>
-        </div>
-      </div>
-
-      <div className="event-container">
-        <div className="event-date pending">
-          <div className="event-day">14</div>
-          <div className="event-month">FEB</div>
-        </div>
-        <div className="event-details">
-          <div className="event-name">Celebration Party</div>
-          <div className="event-location">Location: Bethel Activity Hall</div>
-          <div className="event-time">Time: 2pm - 6pm</div>
-          <div className="event-status">Status: Under Review</div>
-        </div>
-      </div>
+    </div>
     </div>
   );
 };

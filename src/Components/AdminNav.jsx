@@ -16,7 +16,8 @@ const AdminNav = () => {
               <button class="dropbtn">Dropdown</button>
               <div class="dropdown-content">
                 <a href="#">Requests</a>
-                <a href="#">Event Centers</a>              
+                <a href="#">Event Centers</a>  
+                <a href="#" >Logout</a>
               </div>
             </div>
      </div> 

@@ -9,7 +9,9 @@
 .dropbtn {
   background-color: white;
   color: rgb(242, 10, 49);
-  padding: 16px;
+  padding: 2px;
+  width: 100px;
+  border-radius: 5px;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -60,6 +62,9 @@
 
 
 
+
+
+
 @media screen and (max-width:1024px) {
   .dropbtn {
      display: block;
@@ -74,10 +79,19 @@
 }
 
 .drop{
-  position: relative;
+  /* position: relative;
   top: -2px;
-  padding: 0px !important;
+  padding: 0px !important; */
   
+}
+
+.logout_btn{
+  display: none;
+}
+
+
+.topNav{
+ padding: 10px;
 }
   
 }
