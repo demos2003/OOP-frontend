@@ -21,7 +21,6 @@ const PendingEventsTab = ({pendingData}) => {
           </span>{" "}
           {pending.eventcenter}
         </div>
-        <div className="location-block">Status: Under Review</div>
       </div>
     </div>
     )
