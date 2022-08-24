@@ -88,6 +88,7 @@ const ClientBookForm = ({ user, locations }) => {
                 className="form-input"
                 required
                 onChange={(e) => setEventcenter(e.target.value)}
+                
               >
                 {locations.map((p) => (
                   <EventOptions location={p} />

@@ -209,3 +209,10 @@
 
 
 }
+
+@media screen and (max-width:1920px) {
+    .request_holder{
+        margin-left: 240px;
+    }
+    
+}

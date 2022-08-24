@@ -3,11 +3,14 @@ import "./adminNav.css";
 import { FiSettings } from "react-icons/fi";
 import { AiOutlineQuestionCircle, AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { ContextA } from "./context/Context";
-import { useContext } from "react";
+import { useContext, useState} from "react";
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 const AdminNav = ({ adminD }) => {
+  const [active1, setActive1] = useState("Request");
+  const [active2, setActive2] = useState();
+
   const { admin, dispatch } = useContext(ContextA);
   const handleLogout = () => {
     dispatch({ type: "LOGOUTA" });
@@ -25,12 +28,13 @@ const AdminNav = ({ adminD }) => {
         Logout
       </button>
       <div class="dropdown drop">
-        <button class="dropbtn">Dropdown</button>
+        <button class="dropbtn"><GiHamburgerMenu/></button>
         <div class="dropdown-content">
-          <a href="#">Requests</a>
+        <a href="#">requests</a>
           <a href="#">Event Centers</a>
           <a href="#">Logout</a>
         </div>
+      
       </div>
     </div>
   );

@@ -35,3 +35,11 @@
     }
     
 }
+
+
+@media screen and (max-width:1920px) {
+    .request_holder1{
+        margin-left: 240px;
+    }
+    
+}

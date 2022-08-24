@@ -156,6 +156,23 @@ ul.nav li.active {
   .welcome-image{
     display: none;
   }
+  .welcome-section {
+    display: flex;
+    padding: 20px;
+    background-color: #ff3259;
+    border-radius: 10px;
+
+    text-align: center;
+    /* margin: 30px 300px 40px 0; */
+  }
+
+
+  .welcome-text {
+    color: aliceblue;
+    font-size: 1.14rem;
+    margin-right: 0px;
+    line-height: 1.7;
+  }
 }
 
 

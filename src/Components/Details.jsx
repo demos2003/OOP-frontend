@@ -13,8 +13,8 @@ const Details = ({ setActive1, active2, setActive2 }) => {
   const [eventcenter, setEventcenter] = useState();
   const [eventname, setEventname] = useState();
   const [desc, setDesc] = useState();
-  const [status1, setStatus1] = useState("");
-  const [status, setStatus] = useState(status1);
+  // const [stat, setStat] = useState("");
+  const [status, setStatus] = useState();
   const [duration, setDuration] = useState();
   const [dateofevent, setDateofevent] = useState();
   const [timeofevent, setTimeofevent] = useState();
@@ -35,7 +35,7 @@ const Details = ({ setActive1, active2, setActive2 }) => {
     };
     getBookings();
   }, []);
-  
+
   const handleApprove = async () => {
     try {
       axios.put(`${config.baseURL}/api/book/${active2}`, {
@@ -103,13 +103,8 @@ const Details = ({ setActive1, active2, setActive2 }) => {
           <div className="space_3"></div>
           <div className="action_button">
             <p>
-              <button
-                className="accept_btn"
-                onClick={() => {
-                  handleApprove();
-                }}
-              >
-                Accept
+              <button className="accept_btn" onClick={handleApprove}>
+                Approve
               </button>
             </p>
             <p>
